@@ -1,1 +1,37 @@
 
+<!DOCTYPE html>
+
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Atelier By July</title>
+</head>
+<body>
+
+  <h1>Atelier By July</h1>
+
+  <h2>Calculadora 3D</h2>
+
+<label>Peso (g):</label> <input type="number" id="peso"><br><br>
+
+<label>Tempo (h):</label> <input type="number" id="tempo"><br><br>
+
+<button onclick="calcular()">Calcular</button>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    function calcular() {
+      let peso = document.getElementById("peso").value;
+      let tempo = document.getElementById("tempo").value;
+
+      let custo = (peso * 0.02) + (tempo * 2);
+      let preco = custo * 1.5;
+
+      document.getElementById("resultado").innerText =
+        "Preço: € " + preco.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
